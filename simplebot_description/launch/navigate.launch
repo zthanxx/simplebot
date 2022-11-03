@@ -28,12 +28,12 @@
 		<param name="controller_frequency" value="5.0" />
 		<param name="controller_patience" value="15.0" />
 
-                <param name="clearing_rotation_allowed" value="false" /> <!-- Our carlike robot is not able to rotate in place -->
+                <param name="clearing_rotation_allowed" value="true" /> <!-- Our carlike robot is not able to rotate in place -->
 	</node>
 
 
 	<!--  ****** Maps *****  -->
-	<node name="map_server" pkg="map_server" type="map_server" args="$(find simplebot_description)/maps/4x7.yaml" output="screen">
+	<node name="map_server" pkg="map_server" type="map_server" args="$(find simplebot_description)/maps/shape.yaml" output="screen">
                 <param name="frame_id" value="map"/>
 	</node>
 
